@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# About this project
+This project is an interactive map of Ukraine that displays population data for each oblast (region). Users can explore the map by zooming in and out, view boundaries of the oblasts, and toggle layers for main roads and administrative boundaries. Clicking on a specific oblast opens a popup displaying the population of that region. The data is sourced from reliable geographic and population datasets, providing a dynamic and insightful view of Ukraine’s population distribution.
+The app is built using React and React-Leaflet for map rendering, with GeoJSON data formats to handle geographic boundaries and roadmaps. It is designed to provide a clean and user-friendly interface for navigating through population data.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+### Install dependencies:
+Make sure you have Node.js installed and run the following command:
+#### npm install
+### Run the application:
+To start the development server, run:
+#### npm run dev
+### Features
+#### Zoom: 
+##### You can zoom in and out of the map using the mouse wheel or the control buttons on the left.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Layer selection: In the top right corner, you will find a layer icon where you can:
 
-## Expanding the ESLint configuration
+- Toggle the main roads layer on or off.
+- Toggle the oblast boundaries layer on or off.
+#### Population per Oblast: 
+##### Clicking on any oblast will display a popup showing the population of that region. If data is not available, a message will indicate that population data is missing.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Technical Details
+- The project uses React and React-Leaflet to render the interactive map.
+- The geospatial data is in GeoJSON format and is dynamically loaded from the public/data folder.
+- Road maps and oblast boundaries layers are used to provide additional visual detail.
+### Data Sources
+The population and geographic data were sourced from the following documentation:
 
-- Configure the top-level `parserOptions` property like this:
+- [List of Ukrainian oblasts and territories by population (Wikipedia)](https://en.wikipedia.org/wiki/List_of_Ukrainian_oblasts_and_territories_by_population)
+- [Stanford Libraries - Ukraine population data](https://purl.stanford.edu/gg870xt4706)
+- [GeoBoundaries - Ukraine Administrative Boundaries](https://data.humdata.org/dataset/geoboundaries-admin-boundaries-for-ukraine)
+- [Mapcruzin - Free Ukraine Shapefiles](https://mapcruzin.com/free-ukraine-arcgis-maps-shapefiles.htm)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
