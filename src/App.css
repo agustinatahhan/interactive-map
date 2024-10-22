@@ -1,0 +1,50 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.map-container {
+  height: 600px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content {
+  font-size: 1rem;
+  color: #333;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup-tip {
+  background-color: #fff;
+}
+
+.leaflet-control-layers {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+
+.leaflet-control-layers-expanded {
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
